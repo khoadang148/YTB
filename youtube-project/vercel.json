@@ -1,8 +1,17 @@
-{
-    "build": {
-      "env": {
-        "NODE_ENV": "production"
+
+  {
+    "version": 2,
+    "builds": [
+      {
+        "src": "build",
+        "use": "@vercel/static"
       }
-    },
-    "installCommand": "npm install --legacy-peer-deps"
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
   }
+  
